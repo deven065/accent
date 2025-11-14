@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { fetchJSON } from '@/utils/http';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { Poppins } from 'next/font/google';
@@ -23,16 +22,7 @@ export default function SignIn() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // 🪄 Adaptive gradient style and sizing for different platforms
-<<<<<<< HEAD
-=======
-  const gradientStyle = {
-    background:
-      'radial-gradient(1000px 700px at 50% 35%, #d3a9ce 0%, #b177c1 35%, #9041a0 65%, #6c1b7a 100%)',
-    filter: 'saturate(1.05) brightness(1.08)',
-    transition: 'background 0.4s ease, filter 0.4s ease',
-  };
->>>>>>> 0062c4f (Refactor settings and signin pages to use Next.js Image component; optimize profile fetching with useCallback; clean up unused imports in vendors and sidebar components.)
+  // 🪄 Adaptive sizing for different platforms
   
   const [isWindows, setIsWindows] = useState(false);
   const [platformStyles, setPlatformStyles] = useState({});
@@ -111,12 +101,7 @@ export default function SignIn() {
                 ? 'h-[95px] sm:h-[105px]' 
                 : 'h-[110px] sm:h-[120px]'
             }`}
-<<<<<<< HEAD
-            width={64}
-            height={64}
-=======
             priority
->>>>>>> 0062c4f (Refactor settings and signin pages to use Next.js Image component; optimize profile fetching with useCallback; clean up unused imports in vendors and sidebar components.)
           />
         </div>
 
